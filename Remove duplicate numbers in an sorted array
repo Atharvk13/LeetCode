@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"Enter five elements in an array : ";
+    int i,j,k,count=1;
+    char a[5],b[5];
+    for(i=0;i<5;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<5;i++)
+    {
+        b[i]=a[i];
+    }
+    for(i=0;i<5;i++)
+    {
+        cout<<" "<<b[i];
+    }
+    cout<<endl;
+    for(i=0;i<4;i++)
+    {
+        if(a[i]==a[i+1])
+        {
+            b[i+1]='_';
+        }
+        else
+        {
+            count++;
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<4;j++)
+        {
+            if(b[j]=='_')
+        {
+            k=b[j];
+            b[j]=b[j+1];
+            b[j+1]=k;
+        }
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        cout<<" "<<b[i];
+    }
+    cout<<"\n"<<count;
+    
+    
+}
